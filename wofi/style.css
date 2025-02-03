@@ -1,0 +1,56 @@
+@define-color main-bg #141414;
+@define-color main-in #1e1e1e;
+
+window {
+  margin: 0px;
+  background-color: @main-bg;
+  border-radius: 30px;
+  border: 2px solid #FFFFFF;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: #FFFFFF;
+  background-color: @main-in;
+  border-radius: 10px;
+}
+#input:focus{
+  box-shadow: 0px 0px 0px 2px white;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: @main-bg;
+  border-radius: 10px;
+}
+
+#outer-box {
+  margin: 15px;
+  border: none;
+  background-color: @main-bg;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: #FFFFFF;
+}
+
+#entry:selected {
+  background-color: @main-in;
+  border-radius: 10px;
+  outline: none;
+}
+
+#entry:selected * {
+  background-color: @main-in;
+  border-radius: 10px;
+  outline: none;
+}

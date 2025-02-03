@@ -1,0 +1,139 @@
+@import "theme.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-image: radial-gradient(white, black);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+
+modules_left
+
+*/
+
+.modules-left {
+    margin-top: 2px;
+}
+
+#workspaces {
+    margin-left: 10px;
+}
+#workspaces button {
+    padding-right: 0.9em;
+    color: @main-font
+
+;
+    min-width: 0em;
+}
+#workspaces button.focused {
+    font-weight: bolder; /* Somewhy the bar-wide setting is ignored*/
+}
+#window{
+    margin-left: 40px;
+}
+
+
+/*
+
+modules_center
+
+*/
+
+.modules-center {
+    background-image: radial-gradient(black, #dbdbdb);
+    border-radius: 15px;
+}
+
+.modules-center * {
+    padding-top: 2px;
+}
+
+#battery {
+    color: @center-font;
+    min-width:50px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @center-font;
+    min-width:50px;
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    color: @critical-red;
+    min-width:50px;
+    /*background-color: rgba(227, 220, 233, 0.5);*/
+}
+
+#custom-power{
+    font-size: 18pt;
+    min-width:100px;
+    padding-right: 0;
+    padding-left: 6px;
+    color: #DDCCDD;
+    background-image: radial-gradient(#000000 75%, #1a1a1a 25%);
+    border-radius: 15px;
+}
+#custom-power:hover {
+    color: #ffffff;
+}
+
+#clock {
+    color:@center-font;
+    min-width:50px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+/*
+
+modules_right
+
+ */
+
+.modules-left{
+
+}
+
+#custom-network {
+    font-family: "Material Design Icons", sans-serif;
+    color: @main-font
+
+;
+    padding-right: 20px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border: none;
+    border-radius: 5px;
+}
+#pulseaudio-slider highlight {
+    min-width: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: @main-font
+
+;
+}
